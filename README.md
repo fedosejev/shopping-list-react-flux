@@ -2,9 +2,12 @@
 
 Basic shopping list implemented with React.js and Twitter Bootstrap.
 
+Live version: http://fedosejev.github.io/shopping-list-react/
+
 ## Build
 
 `npm install`
+`gulp build`
 
 ## Run
 
