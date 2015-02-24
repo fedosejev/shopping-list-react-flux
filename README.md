@@ -6,6 +6,8 @@ Basic shopping list implemented with React.js and Twitter Bootstrap.
 
 `npm install`
 
+## Run
+
 Open `build/index.html` in a web browser.
 
 ## License
