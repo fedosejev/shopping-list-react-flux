@@ -23,4 +23,6 @@ gulp.task('watch', function() {
   gulp.watch('./source/**/*.html', ['minifyHtml']);
 });
 
+gulp.task('build', ['browserify', 'minifyHtml']);
+
 gulp.task('default', ['watch', 'browserify', 'minifyHtml']);

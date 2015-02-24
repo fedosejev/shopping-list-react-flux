@@ -2,7 +2,7 @@
 
 Basic shopping list implemented with React.js and Twitter Bootstrap.
 
-## Install
+## Build
 
 `npm install`
 
