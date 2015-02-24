@@ -1,0 +1,30 @@
+{
+  "name": "shopping-list-react",
+  "version": "1.0.0",
+  "description": "Basic shopping list implemented with React.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fedosejev/shopping-list-react.git"
+  },
+  "author": "Artemij Fedosejev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fedosejev/shopping-list-react/issues"
+  },
+  "homepage": "https://github.com/fedosejev/shopping-list-react",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-html-minifier": "^0.1.6",
+    "reactify": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.2",
+    "react": "^0.12.2"
+  }
+}
