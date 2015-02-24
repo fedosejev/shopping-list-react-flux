@@ -7,6 +7,7 @@ Live version: http://fedosejev.github.io/shopping-list-react/
 ## Build
 
 `npm install`
+
 `gulp build`
 
 ## Run
