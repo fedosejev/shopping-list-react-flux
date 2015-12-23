@@ -1,15 +1,11 @@
 var React = require('react');
-var ShoppingList = require('./ShoppingList.react');
+var ShoppingList = require('./ShoppingList.jsx');
 
 var Application = React.createClass({
-  getShoppingListItems: function () {
-    return {};
-  },
-
   render: function () {
     return (
       <div className="container">
-        <ShoppingList items={this.getShoppingListItems()} />
+        <ShoppingList />
       </div>
     );
   }

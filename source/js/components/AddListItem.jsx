@@ -1,27 +1,30 @@
 var React = require('react');
 var uuid = require('node-uuid');
+var ListItemActionCreators = require('../actions/ListItemActionCreators');
+
+var styleRequired = {
+  color: "#ffaaaa"
+};
 
 var AddListItem = React.createClass({
-  handleSubmit: function (event) {
+
+  handleSubmitEvent: function (event) {
     event.preventDefault();
 
     var item = {
       id: uuid.v4(),
       date: new Date(),
-      name: this.refs.name.getDOMNode().value.trim(),
-      description: this.refs.description.getDOMNode().value.trim(),
-      quantity: this.refs.quantity.getDOMNode().value
+      name: this.refs.name.value.trim(),
+      description: this.refs.description.value.trim(),
+      quantity: this.refs.quantity.value
     };
 
-    this.props.handleAddListItem(item);
+    ListItemActionCreators.addListItem(item);
   },
-  render: function () {
-    var styleRequired = {
-      color: "#ffaaaa"
-    };
 
+  render: function () {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmitEvent}>
         <h3 className="page-header">Add New Item</h3>
 
         <div className="form-group">

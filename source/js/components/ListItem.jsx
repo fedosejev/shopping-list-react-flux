@@ -1,20 +1,15 @@
 var React = require('react');
-
-var Description = React.createClass({
-  render: function () {
-    return (
-      <div className="panel-body">
-        {this.props.description}
-      </div>
-    );
-  }
-});
+var ListItemDescription = require('./ListItemDescription.jsx');
+var ListItemActionCreators = require('../actions/ListItemActionCreators');
 
 var ListItem = React.createClass({
+
   handleSubmit: function (event) {
     event.preventDefault();
 
-    this.props.handleRemoveListItem(this.props.item.id);
+    var listItemId = this.props.item.id;
+
+    ListItemActionCreators.removeListItem(listItemId);
   },
 
   render: function () {
@@ -25,7 +20,7 @@ var ListItem = React.createClass({
           {item.quantity} x {item.name}
         </div>
 
-        {item.description.length > 0 ? <Description description={item.description} /> : ''}
+        {item.description.length > 0 ? <ListItemDescription description={item.description} /> : ''}
 
         <div className="panel-footer">
           <form className="form-inline" onSubmit={this.handleSubmit}>

@@ -1,6 +1,6 @@
 # Shopping List with React.js
 
-Basic shopping list implemented with React.js and Twitter Bootstrap.
+Basic shopping list implemented with React.js (v0.14), Flux and Twitter Bootstrap (v3).
 
 Live version: http://fedosejev.github.io/shopping-list-react/
 
@@ -8,7 +8,13 @@ Live version: http://fedosejev.github.io/shopping-list-react/
 
 `npm install`
 
-`gulp build`
+In development environment:
+
+`npm run build-for-development`
+
+In production environment:
+
+`npm run build-for-production`
 
 ## Run
 

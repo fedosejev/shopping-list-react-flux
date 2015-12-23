@@ -1,41 +1,10 @@
 var React = require('react');
-var ListItem = require('./ListItem.react');
-
-var ListHeader = React.createClass({
-  handleSubmit: function (event) {
-    event.preventDefault();
-
-    this.props.removeAllListItems();
-  },
-
-  render: function () {
-    var totalNumberOfListItems = this.props.totalNumberOfListItems;
-
-    if (totalNumberOfListItems > 0) {
-      return (
-        <form onSubmit={this.handleSubmit} className="form-inline">
-          {this.props.totalNumberOfListItems} {totalNumberOfListItems === 1 ? 'item' : 'items'}
-          {' '}
-          <button className="btn btn-xs btn-default" type="submit">Remove all</button>
-        </form>
-      );
-    }
-
-    return (<span>Shopping List</span>);
-  }
-});
-
-var EmptyList = React.createClass({
-  render: function () {
-    return (
-      <div>
-        There are no items in your list.
-      </div>
-    );
-  }
-});
+var ListItem = require('./ListItem.jsx');
+var ListHeader = require('./ListHeader.jsx');
+var EmptyList = require('./EmptyList.jsx');
 
 var List = React.createClass({
+
   getListOfItemIds: function (items) {
     return Object.keys(items);
   },
@@ -58,7 +27,7 @@ var List = React.createClass({
     return (
       this
       .getListOfItemIds(items)
-      .map(function (itemId) {
+      .map(function createListItemElement(itemId) {
         item = items[itemId];
         return (<ListItem item={item} handleRemoveListItem={this.props.removeListItem} key={item.id} />);
       }.bind(this))
@@ -73,11 +42,15 @@ var List = React.createClass({
     return (
       <div>
         <h3 className="page-header">
+
           <ListHeader
             totalNumberOfListItems={this.getTotalNumberOfListItems(items)}
             removeAllListItems={this.props.removeAllListItems} />
+
         </h3>
-        <ul>{listItemElements.length > 0 ? listItemElements : <EmptyList />}</ul>
+        <ul>
+          {listItemElements.length > 0 ? listItemElements : <EmptyList />}
+        </ul>
       </div>
     );
   }
