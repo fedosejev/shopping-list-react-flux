@@ -8,11 +8,11 @@ Live version: http://fedosejev.github.io/shopping-list-react/
 
 `npm install`
 
-In development environment:
+#### In development environment:
 
 `npm run build-for-development`
 
-In production environment:
+#### In production environment:
 
 `npm run build-for-production`
 
