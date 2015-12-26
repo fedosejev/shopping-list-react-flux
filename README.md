@@ -1,6 +1,6 @@
 # Shopping List with React.js
 
-Basic shopping list implemented with React.js (v0.14), Flux and Twitter Bootstrap (v3).
+Basic shopping list implemented with React.js (`v0.14`), Flux and Twitter Bootstrap (`v3`).
 
 Live version: http://fedosejev.github.io/shopping-list-react/
 
