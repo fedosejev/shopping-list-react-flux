@@ -44,4 +44,4 @@ gulp.task('watch', function() {
 gulp.task('build-development', ['js-development', 'html-development']);
 gulp.task('build-production', ['js-production', 'html-production']);
 
-gulp.task('default', ['watch', 'js-development', 'html-production']);
+gulp.task('default', ['js-development', 'html-production', 'watch']);
