@@ -43,13 +43,13 @@ var List = React.createClass({
       <div>
         <h3 className="page-header">
 
-          <ListHeader
-            totalNumberOfListItems={this.getTotalNumberOfListItems(items)}
-            removeAllListItems={this.props.removeAllListItems} />
+          <ListHeader totalNumberOfListItems={this.getTotalNumberOfListItems(items)} />
 
         </h3>
         <ul>
+
           {listItemElements.length > 0 ? listItemElements : <EmptyList />}
+
         </ul>
       </div>
     );
