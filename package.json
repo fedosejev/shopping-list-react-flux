@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "ulimit -S -n 2048 && gulp watch",
     "build-for-development": "ulimit -S -n 2048 && gulp build-development",
     "build-for-production": "ulimit -S -n 2048 && gulp build-production"
   },
