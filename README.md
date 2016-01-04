@@ -22,6 +22,10 @@ http://fedosejev.github.io/shopping-list-react/
 
 Open `build/index.html` in a web browser.
 
+## Questions?
+
+You can ask Artemij anything on Snapchat - Art's username is `artemij`.
+
 ## License
 
 This software is released under the MIT license.
