@@ -28,6 +28,10 @@ Open `build/index.html` in a web browser.
 
 You can ask Artemij anything on Snapchat - Art's username is `artemij`.
 
+## A version without Flux
+
+https://github.com/fedosejev/shopping-list-react
+
 ## License
 
 This software is released under the MIT license.
