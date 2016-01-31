@@ -28,7 +28,7 @@ Open `build/index.html` in a web browser.
 
 You can ask Artemij anything on Snapchat - Art's username is `artemij`.
 
-## A version without Flux
+## Version without Flux
 
 https://github.com/fedosejev/shopping-list-react
 
