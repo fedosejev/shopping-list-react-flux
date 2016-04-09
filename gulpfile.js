@@ -6,7 +6,7 @@ var reactify = require('reactify');
 var htmlMinifier = require('gulp-html-minifier');
 var uglify = require('gulp-uglify');
 
-gulp.task('js-development', function () {
+gulp.task('build-js-for-development', function() {
   return browserify('./source/js/app.jsx')
         .transform(reactify)
         .bundle()
@@ -14,7 +14,7 @@ gulp.task('js-development', function () {
         .pipe(gulp.dest('./build/js/'));
 });
 
-gulp.task('js-production', function () {
+gulp.task('build-js-for-production', function () {
   return browserify('./source/js/app.jsx')
         .transform(reactify)
         .bundle()
@@ -24,13 +24,13 @@ gulp.task('js-production', function () {
         .pipe(gulp.dest('./build/js/'));
 });
 
-gulp.task('html-development', function () {
+gulp.task('build-html-for-development', function () {
   return gulp
         .src('./source/*.html')
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('html-production', function () {
+gulp.task('build-html-for-production', function () {
   return gulp
         .src('./source/*.html')
         .pipe(htmlMinifier({collapseWhitespace: true}))
@@ -38,12 +38,12 @@ gulp.task('html-production', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./source/js/**/*.jsx', ['js-development']);
-  gulp.watch('./source/js/**/*.js', ['js-development']);
-  gulp.watch('./source/**/*.html', ['html-development']);
+  gulp.watch('./source/js/**/*.jsx', ['build-js-for-development']);
+  gulp.watch('./source/js/**/*.js', ['build-js-for-development']);
+  gulp.watch('./source/**/*.html', ['build-html-for-development']);
 });
 
-gulp.task('build-development', ['js-development', 'html-development']);
-gulp.task('build-production', ['js-production', 'html-production']);
+gulp.task('build-for-development', ['build-js-for-development', 'buildhtml-for-development']);
+gulp.task('build-for-production', ['build-js-for-production', 'build-html-for-production']);
 
-gulp.task('default', ['js-development', 'html-development', 'watch']);
+gulp.task('default', ['build-js-for-development', 'build-html-for-development', 'watch']);

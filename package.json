@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "ulimit -S -n 2048 && gulp watch",
-    "build-for-development": "ulimit -S -n 2048 && gulp build-development",
-    "build-for-production": "ulimit -S -n 2048 && gulp build-production"
+    "build-for-development": "ulimit -S -n 2048 && gulp build-for-development",
+    "build-for-production": "ulimit -S -n 2048 && gulp build-for-production",
+    "build": "ulimit -S -n 2048 && gulp"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
     "flux": "^2.1.1",
     "node-uuid": "^1.4.2",
     "object-assign": "^4.0.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react": "^0.15.0",
+    "react-dom": "^0.15.0"
   }
 }
