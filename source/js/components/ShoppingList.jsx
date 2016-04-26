@@ -5,16 +5,18 @@ var AddListItem = require('./AddListItem.jsx');
 var ShoppingList = React.createClass({
   render: function () {
     return (
-      <div className="row">
-        <div className="col-sm-6">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
 
-          <List />
-            
-        </div>
-        <div className="col-sm-6">
+            <List />
+              
+          </div>
+          <div className="col-sm-6">
 
-          <AddListItem />
-        
+            <AddListItem />
+          
+          </div>
         </div>
       </div>
     );
