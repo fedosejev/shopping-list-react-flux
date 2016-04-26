@@ -42,7 +42,7 @@ gulp.task('watch', function () {
   gulp.watch('./source/**/*.html', ['build-html-for-development']);
 });
 
-gulp.task('build-for-development', ['build-js-for-development', 'buildhtml-for-development']);
+gulp.task('build-for-development', ['build-js-for-development', 'build-html-for-development']);
 gulp.task('build-for-production', ['build-js-for-production', 'build-html-for-production']);
 
 gulp.task('default', ['build-js-for-development', 'build-html-for-development', 'watch']);
