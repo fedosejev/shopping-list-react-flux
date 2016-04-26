@@ -4,7 +4,7 @@ var EmptyList = React.createClass({
   render: function () {
     return (
       <div>
-        There are no items in your list.
+        There are no items in your list. Updated.
       </div>
     );
   }

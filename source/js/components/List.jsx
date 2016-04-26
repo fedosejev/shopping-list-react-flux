@@ -2,8 +2,31 @@ var React = require('react');
 var ListItem = require('./ListItem.jsx');
 var ListHeader = require('./ListHeader.jsx');
 var EmptyList = require('./EmptyList.jsx');
+var ListItemStore = require('../stores/ListItemStore');
 
 var List = React.createClass({
+
+  getInitialState: function () {
+    return this.getList();
+  },
+
+  getList: function () {
+    return {
+      items: ListItemStore.getAllListItems()
+    };
+  },
+
+  updateState: function () {
+      this.setState(this.getList());
+  },
+
+  componentDidMount: function () {
+    ListItemStore.addChangeListener(this.updateState);
+  },
+
+  componentWillUnmount: function () {
+    ListItemStore.removeChangeListener(this.updateState);
+  },
 
   getListOfItemIds: function (items) {
     return Object.keys(items);
@@ -36,7 +59,7 @@ var List = React.createClass({
   },
 
   render: function () {
-    var items = this.props.items;
+    var items = this.state.items;
     var listItemElements = this.createListItemElements(items);
 
     return (
