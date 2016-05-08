@@ -6,6 +6,11 @@ Basic shopping list implemented with React.js (`v15`), Flux and Twitter Bootstra
 
 http://fedosejev.github.io/shopping-list-react-flux/
 
+## Other versions
+
++ [React.js and ES5](https://github.com/fedosejev/shopping-list-react)
++ [React.js and ES2015](https://github.com/fedosejev/shopping-list-react-es2015)
+
 ## Install
 
 `npm install`
@@ -27,11 +32,6 @@ Open `build/index.html` in a web browser.
 ## Questions?
 
 You can ask Artemij anything on Snapchat - Art's username is `artemij`.
-
-## Other versions
-
-+ [Without Flux (ES5)](https://github.com/fedosejev/shopping-list-react)
-+ [Without Flux (ES2015)](https://github.com/fedosejev/shopping-list-react-es2015)
 
 ## License
 
